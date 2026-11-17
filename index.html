@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grand Theft Auto VI | Официальный сайт Rockstar Games</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&family=Special+Elite&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #0a0a0a; color: #ffffff; font-family: 'Rajdhani', sans-serif; overflow-x: hidden; }
+        .bg-image { position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; opacity: 0.65; filter: brightness(0.8) contrast(1.1); }
+        .bg-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(180deg, #0a0a0a 0%, #0a0a0a 40%, rgba(10, 10, 10, 0.6) 100%); z-index: -1; }
+        nav { position: fixed; top: 0; width: 100%; padding: 25px 60px; z-index: 1000; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Special Elite', cursive; font-size: 34px; letter-spacing: 3px; color: #8a2be2; text-transform: uppercase; cursor: default; text-shadow: 0 0 20px rgba(138, 43, 226, 0.4); }
+        .logo span { color: #ffffff; }
+        .nav-links { display: flex; gap: 40px; }
+        .nav-links a { color: #cccccc; text-decoration: none; font-size: 16px; text-transform: uppercase; letter-spacing: 2px; transition: color 0.3s; font-weight: 400; }
+        .nav-links a:hover { color: #8a2be2; }
+        .hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 20px; position: relative; }
+        .gta-title { font-family: 'Special Elite', cursive; font-size: clamp(48px, 12vw, 140px); color: #ffffff; text-transform: uppercase; letter-spacing: -2px; line-height: 0.9; margin-bottom: 20px; text-shadow: 0 0 30px rgba(255, 255, 255, 0.3), 2px 2px 0px #8a2be2, 4px 4px 0px rgba(0, 0, 0, 0.8); animation: titleGlow 3s ease-in-out infinite alternate; }
+        @keyframes titleGlow { 0% { text-shadow: 0 0 30px rgba(255, 255, 255, 0.3), 2px 2px 0px #8a2be2, 4px 4px 0px rgba(0, 0, 0, 0.8); } 100% { text-shadow: 0 0 50px rgba(138, 43, 226, 0.6), 2px 2px 0px #8a2be2, 4px 4px 0px rgba(0, 0, 0, 0.8); } }
+        .subtitle { font-size: 24px; color: #8a2be2; text-transform: uppercase; letter-spacing: 8px; margin-bottom: 50px; opacity: 0.9; }
+    </style>
+</head>
+<body>
+    <img src="https://tproger.ru/signed_image/k_UpsDGThfw_X8-yfkI4MhC1iKXo_im7SfO_D5MU3Ko/dpr:1/f:avif/h:592/w:872/aHR0cHM6Ly9tZWRpYS50cHJvZ2VyLnJ1L3VwbG9hZHMvMjAyNS8xMS8wOGM5YTVkYS0zYzA4LTQzMjQtOTBlYi03NTRkMmRkMzJiMTAuanBlZw" alt="GTA 6 Background" class="bg-image">
+    <div class="bg-overlay"></div>
+    <nav>
+        <div class="logo">R<span>*</span></div>
+        <div class="nav-links">
+            <a href="#">Главная</a>
+            <a href="#">О игре</a>
+            <a href="#">Трейлеры</a>
+            <a href="#">Скачать</a>
+        </div>
+    </nav>
+    <div class="hero">
+        <div class="gta-title">GRAND<br>THEFT<br>AUTO<br>VI</div>
+        <div class="subtitle">Rockstar Games</div>
+        
+        <div class="download-container">
+            <button class="download-btn" onclick="openVideo()">
+                СКАЧАТЬ
+            </button>
+
+        </div>
+    </div>
+
+    <style>
+        .download-container { margin-top: 40px; }
+        .download-btn { position: relative; background: transparent; border: 2px solid #8a2be2; color: #8a2be2; padding: 20px 50px; font-family: 'Special Elite', cursive; font-size: 24px; text-transform: uppercase; letter-spacing: 4px; cursor: pointer; transition: all 0.4s ease; overflow: hidden; z-index: 1; box-shadow: 0 0 20px rgba(138, 43, 226, 0.2); }
+        .download-btn::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(138, 43, 226, 0.2), transparent); transition: 0.5s; z-index: -1; }
+        .download-btn:hover::before { left: 100%; }
+        .download-btn:hover { color: #000; background: #8a2be2; box-shadow: 0 0 40px rgba(138, 43, 226, 0.6); transform: translateY(-3px); }
+        .download-btn:active { transform: translateY(-1px); }
+        
+        .info-section { padding: 100px 60px; max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+        .info-card { background: rgba(20, 20, 20, 0.8); border: 1px solid #333; padding: 40px; backdrop-filter: blur(10px); transition: transform 0.3s, border-color 0.3s; }
+        .info-card:hover { transform: translateY(-5px); border-color: #8a2be2; }
+        .info-card h3 { font-family: 'Special Elite', cursive; font-size: 28px; color: #8a2be2; margin-bottom: 20px; text-transform: uppercase; }
+        .info-card p { color: #aaa; line-height: 1.8; font-size: 16px; }
+
+        @media (max-width: 768px) {
+            nav { padding: 20px 30px; flex-direction: column; gap: 20px; }
+            .nav-links { gap: 20px; }
+            .gta-title { font-size: 60px; }
+            .subtitle { font-size: 18px; letter-spacing: 4px; }
+            .download-btn { padding: 16px 40px; font-size: 20px; }
+            .info-section { padding: 60px 30px; }
+        }
+    </style>
+
+    <div class="info-section">
+        <div class="info-card">
+            <h3>Vice City</h3>
+            <p>Вернитесь в солнечный город Флорида и его преступную столицу — Vice City. Огромный открытый мир, полный опасностей, возможностей и безумия.</p>
+        </div>
+        <div class="info-card">
+            <h3>Лусия и Джейсон</h3>
+            <p>История двух персонажей, связанных криминалом. Впервые в серии GTA главная героиня — женщина.</p>
+        </div>
+        <div class="info-card">
+            <h3>Online</h3>
+            <p>GTA Online возвращается с новым контентом, событиями и возможностями для создания собственной криминальной империи.</p>
+        </div>
+    </div>
+
+    <script>
+        function openVideo() {
+            window.open('https://news.rr.nihalnavath.com/posts/GtaRockstar-96ffc72f', '_blank');
+        }
+    </script>
+</body>
+</html>
